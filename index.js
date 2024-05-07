@@ -35,14 +35,14 @@ bagHeart.addEventListener("click", () => {
     bagHeart.classList.toggle("red")
 })
 
-// basket initialization
-
 let basTotal = 0
 let socksTotal = 0
 let bagTotal = 0
 let allTotal = basTotal + socksTotal + bagTotal
+// basket initialization
 
 
+// plus basket initialization
 basketPlus.addEventListener("click", () => {
     basTotal += 1
     allTotal += 100
@@ -50,6 +50,8 @@ basketPlus.addEventListener("click", () => {
     totalPrice.innerHTML = `${allTotal}$`
     
 })
+
+// minus basket initialization
 function basketMin() {
     allTotal -=100
 }
@@ -70,7 +72,7 @@ basketMinus.addEventListener("click", () => {
     }
 })
 
-
+// delete basket initialization
 function basDel(){
     if (basTotal > 0) {
     let baspri = 100
@@ -88,13 +90,15 @@ basketDelete.addEventListener("click", () => {
 
 // socks initialization
 
-
+// plus socks initialization
 socksPlus.addEventListener("click", () => {
     socksTotal += 1
     allTotal += 20
     socksQuantity.innerHTML = socksTotal
     totalPrice.innerHTML = `${allTotal}$`
 })
+
+// minus socks initialization
 function sockMin() {
     allTotal -= 20
 }
@@ -116,6 +120,7 @@ socksMinus.addEventListener("click", () => {
     }
 })
 
+// delete socks initialization
 function socDel(){
     if (socksTotal > 0) {
     let socpri = 20
@@ -131,6 +136,7 @@ socksDelete.addEventListener("click", () => {
 })
 // bag initialization
 
+// plus bag initialization
 bagPlus.addEventListener("click", () => {
     bagTotal += 1
     allTotal += 50
@@ -138,6 +144,8 @@ bagPlus.addEventListener("click", () => {
     totalPrice.innerHTML = `${allTotal}$`
 })
 
+
+// minus bag initialization
 function bagMin(){
     allTotal -= 50
 }
@@ -154,6 +162,8 @@ bagMinus.addEventListener("click", () => {
         bagQuantity.innerHTML = bagTotal
     }
 })
+
+// delete bag initialization
 
 function bagDel(){
     if (bagTotal > 0) {
